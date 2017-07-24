@@ -26,7 +26,7 @@ body{
 	color: #FFF;
 }
 #names{
-	top: 25%;
+	top: 28%;
 }
 #sentiments{
 	top:30%;
@@ -100,7 +100,9 @@ body{
     border: 1px solid #e5e5e5;
     margin-top: 1rem;
 }
-
+#con #names button{
+	margin: 0;
+}
 
 @media screen and (min-width: 768px){
 	#names , #sentiments{
