@@ -26,6 +26,9 @@ body{
     line-height: 2.5rem;
 	color: #FFF;
 }
+#names{
+	top: 25%;
+}
 #names label{
 	font-size: 1.6rem;
 }
