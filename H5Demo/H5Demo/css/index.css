@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+body{
+	height: 100%;
+}
+#main{
+	width: 100%;
+	height: 100%;
+	background: url(../images/bg.jpg) no-repeat top/100%;
+}
+#con{
+	width: 100%;
+	height: 100%;
+}
+#con_bg{
+	width: 100%;
+    height: 100%;
+    position: relative;
+}
+#names ,#sentiments{
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    text-align: center;
+    font-family: "微软雅黑";
+    line-height: 2.2rem;
+}
+#names label{
+	font-size: 1.6rem;
+}
+#names input , #sentiments input{
+	border: 1px solid #e5e5e5;
+    padding-left: .5rem;
+}
+#imgs , #sentiments, #show_bg{
+	display: none;
+	color: #FFF;
+}
+#imgs{
+	text-align: center;
+	color: #FFF;
+}
+#imgs img{
+	width: 30%;
+	height: 6.5rem;
+	margin-bottom: .5rem;
+}
+#imgs img:nth-of-type(3n+2){
+	margin: 0 1.5%;
+}
+#show_bg{
+	width: 100%;
+	height: 50%;
+	overflow: hidden;
+	text-align: center;
+}
+.show_img{
+	position: relative;
+}
+.show_img img{
+	width: 100%;
+	height: 100%;
+}
+.show_txt{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #FFF;
+    font-size: 2rem;
+}
+#name1{
+	position: absolute;
+    top: 50%;
+    left: 15%;
+}
+#name2{
+	position: absolute;
+    left: 35%;
+    top: 50%;
+}
+#sent{
+	position: absolute;
+    top: 9%;
+    left: 10%;
+    font-size: 2.5rem;
+    font-family: '楷体';
+}
+#con button{
+	line-height: 2rem;
+    border: 1px solid #e5e5e5;
+    margin-top: 1rem;
+}
+
+
+@media screen and (min-width: 768px){
+	#names , #sentiments{
+    top: 62%;
+}
+}
