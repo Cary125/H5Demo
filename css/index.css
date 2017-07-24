@@ -20,10 +20,11 @@ body{
 #names ,#sentiments{
     width: 100%;
     position: absolute;
-    top: 25%;
+    top: 30%;
     text-align: center;
     font-family: "微软雅黑";
-    line-height: 2.2rem;
+    line-height: 2.5rem;
+	color: #FFF;
 }
 #names label{
 	font-size: 1.6rem;
@@ -31,6 +32,7 @@ body{
 #names input , #sentiments input{
 	border: 1px solid #e5e5e5;
     padding-left: .5rem;
+	line-height: 2.5rem;
 }
 #imgs , #sentiments, #show_bg{
 	display: none;
