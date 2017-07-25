@@ -28,11 +28,15 @@ body{
     font-family: "微软雅黑";
     line-height: 3.5rem;
 }
+#sentiments{
+	top: 40%;
+
+}
 #names>img{
 	margin-bottom: 2%;
 	opacity: 0;
 }
-#names label{
+#names label ， #sentiments label{
 	font-size: 1.6rem;
 }
 #names input , #sentiments input{
