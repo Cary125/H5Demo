@@ -1,15 +1,14 @@
 
  $(document).ready(function () {
-	
+	$('#names>img').animate({opacity:1},'slow','swing');
 	$('#btn1').on('click',function(){
 		var name_Men=$('#nameMen').val();
 		var name_Women=$('#nameWomen').val();
-		var nemelist=name_Men+name_Women
-		$('#sentiments').hide()
-		$('#names').hide();
+		$('#names').animate('slow').addClass('add_transform');
 		$('#imgs').show();
-		$('#imgs img').on('click',function(){
-		var imglist=$(this).attr('src');
+		$('#imgs ul li').on('click',function(){
+		var imglist=$(this).children().attr('src');
+		$(this).attr('class','selected').siblings().attr('class','');
 		$('#btn2').on('click',function(){
 			$('#imgs').hide();
 			$('#sentiments').show()
@@ -18,13 +17,21 @@
 			var senfont=$('#sentiment').val();
 			$('#sentiments').hide()
 			$('#show_bg').show();
-			$('img').attr('src',imglist);
-			$('.show_txt #show_name').html(nemelist);
+			$('.show_img .img_bg').attr('src',imglist);
+			$('.show_txt #name1').html(name_Men);
+			$('.show_txt #name2').html(name_Women);
 			$('.show_txt #sent').html(senfont);
 		})
 	})
 	})
-	
+	var viewHeight = window.innerHeight; //获取可视区域高度
+	$("input").focus(function()
+	{
+	    $("#main").css("height",viewHeight);
+	}).blur(function()
+	{
+	    $("#main").css("height","100%");
+	});
 	
 	
 });

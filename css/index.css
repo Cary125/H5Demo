@@ -1,12 +1,15 @@
 @charset "utf-8";
 
 body{
-	height: 100%;
+	min-height:100%;
 }
 #main{
-	width: 100%;
-	height: 100%;
-	background: url(../images/bg.jpg) no-repeat top/100%;
+	width: 100%; 
+	height:100%;
+	overflow: hidden;
+	background: url(../images/bg.jpg) no-repeat;
+	position: relative;
+	color: #FFF; 
 }
 #con{
 	width: 100%;
@@ -20,16 +23,14 @@ body{
 #names ,#sentiments{
     width: 100%;
     position: absolute;
+    top: 15%;
     text-align: center;
     font-family: "微软雅黑";
-    line-height: 2.5rem;
-	color: #FFF;
+    line-height: 2.2rem;
 }
-#names{
-	top: 28%;
-}
-#sentiments{
-	top:30%;
+#names>img{
+	margin-bottom: 2%;
+	opacity: 0;
 }
 #names label{
 	font-size: 1.6rem;
@@ -37,8 +38,6 @@ body{
 #names input , #sentiments input{
 	border: 1px solid #e5e5e5;
     padding-left: .5rem;
-	line-height: 2.5rem;
-	margin-bottom: .5rem;
 }
 #imgs , #sentiments, #show_bg{
 	display: none;
@@ -47,25 +46,41 @@ body{
 #imgs{
 	text-align: center;
 	color: #FFF;
+	padding: 5% 2%;
+    position: absolute;
+    top: 16%;
 }
 #imgs img{
-	width: 30%;
-	height: 6.5rem;
-	margin-bottom: .5rem;
+	width: 100%;
+	height: 100%;
 }
-#imgs img:nth-of-type(3n+2){
-	margin: 0 1.5%;
+#imgs ul{
+	width: 100%;
+	overflow: hidden;
+}
+#imgs ul li{
+	width: 30%;
+	float: left;
+	height: 6.5rem;
+	margin-bottom: 1%;
+	border: .2rem solid transparent;
+}
+#imgs ul li:nth-of-type(3n+2) {
+    margin: 0 2.5%;
 }
 #show_bg{
 	width: 100%;
 	height: 50%;
 	overflow: hidden;
 	text-align: center;
+	position: absolute;
+    top: 15%;
 }
 .show_img{
 	position: relative;
 }
-.show_img img{
+
+.show_img>img{
 	width: 100%;
 	height: 100%;
 }
@@ -78,32 +93,52 @@ body{
     color: #FFF;
     font-size: 2rem;
 }
-#name1{
-	position: absolute;
-    top: 50%;
-    left: 15%;
+#show_name{
+    position: absolute;
+    top: 35%;
+    width: 60%;
 }
-#name2{
-	position: absolute;
-    left: 35%;
-    top: 50%;
+#show_name img{
+	width: 2.5rem;
+	height: 2.5rem;
 }
 #sent{
-	position: absolute;
-    top: 9%;
-    left: 10%;
+    position: absolute;
+    top: 45%;
+    left: 0%;
     font-size: 2.5rem;
     font-family: '楷体';
+    width: 53%;
 }
 #con button{
 	line-height: 2rem;
     border: 1px solid #e5e5e5;
     margin-top: 1rem;
 }
+
 #con #names button{
 	margin: 0;
 }
-
+#con #share{
+	margin-top: 3%;
+}
+.add_transform{  
+   transform:rotate(180deg);  
+   -ms-transform:rotate(180deg);    /* IE 9 */  
+   -moz-transform:rotate(180deg);   /* Firefox */  
+   -webkit-transform:rotate(180deg); /* Safari 和 Chrome */  
+    -o-transform:rotate(180deg);    /* Opera */  
+    transition: all 0.5s ease-in-out;  
+    -moz-transition: all 0.5s ease-in-out; /* Firefox 4 */  
+    -webkit-transition: all 0.5s ease-in-out; /* Safari 和 Chrome */  
+    -o-transition: all 0.\5s ease-in-out; /* Opera */  
+    /*width: 0 !important;
+    height: 0;*/
+}  
+#imgs ul .selected{
+	border: .2rem solid #FFFFFF;
+	
+}
 @media screen and (min-width: 768px){
 	#names , #sentiments{
     top: 62%;
