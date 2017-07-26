@@ -39,10 +39,12 @@
 			$('.show_name #name2').html(name_Women);
 			$('.show_txt .sent').html(senfont);
 			$('.btn_share').on('click',function(){
-				$('.share_date').animate({bottom:0},'slow');
-				$('.share_date ').on('click',function(){
-					var thisHeight=$('.share_date').height()
-					$('.share_date').animate({bottom:-thisHeight},'slow');
+				$('.share_date').show()
+				$('.share_date_con').animate({bottom:0});
+				$('.share_date_con ').on('click',function(){
+					var thisHeight=$('.share_date_con').height()
+					$('.share_date_con').animate({bottom:-thisHeight});
+					$('.share_date').hide()
 				})
 			})
 		})
