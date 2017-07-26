@@ -319,7 +319,7 @@
 
 .share_date{
     width: 10rem;
-    height: 17.79rem;
+    height: 100%;
     position: fixed;
     top: 0;
     z-index: 20;
@@ -327,7 +327,7 @@
     display: none;
 }
 .share_date_con{
-    width: 10rem;
+    width: inherit;
     height: 8.73rem;
     position: absolute;
     bottom: 0;
@@ -335,17 +335,7 @@
     background-image: url(../images/share.jpg);
     background-size: 100% 100%;
 }
-.share_down{
-	bottom: -8.73rem; 
-}
-/*.share_date img{
-	width: inherit;
-    height: inherit;
-    position: absolute;
-    top: 0;
-   	left: 0;
-    z-index: 6;
-}*/
+
 .cancel{
 	display: block;
 	position: absolute;
