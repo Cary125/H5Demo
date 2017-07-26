@@ -38,6 +38,13 @@
 			$('.show_name #name1').html(name_Men);
 			$('.show_name #name2').html(name_Women);
 			$('.show_txt .sent').html(senfont);
+			$('.btn_share').on('click',function(){
+				$('.share_date').animate({bottom:0},'slow');
+				$('.share_date ').on('click',function(){
+					var thisHeight=$('.share_date').height()
+					$('.share_date').animate({bottom:-thisHeight},'slow');
+				})
+			})
 		})
 	})
 	})

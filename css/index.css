@@ -315,3 +315,34 @@
 	border-radius: 10px;
 	background: rgba(255,255,255,.2);
 }
+
+.share_date{
+	width: 10rem;
+    height: 8.73rem;
+    position: fixed;
+     bottom: -8.73rem; 
+    z-index: 20;
+    background-image: url(../images/share.jpg);
+}
+.share_down{
+	bottom: -8.73rem; 
+}
+/*.share_date img{
+	width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+   	left: 0;
+    z-index: 6;
+}*/
+.cancel{
+	display: block;
+	position: absolute;
+    width: 10rem;
+    height: 1rem;
+    bottom: .1rem;
+    z-index: 7;
+    color: #474746;
+    font-size: .5rem;
+    text-align: center;
+}
