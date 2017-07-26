@@ -1,70 +1,87 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-		<meta content="telephone=no" name="format-detection" />
-		<meta name="keywords" content="seokeywords" />
-		<meta name="description" content="seodescription" />
-		<title>七夕节</title>
-		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="css/index.css"/>
-	</head>
-	<body>
-		<div id='main'>
-			<div id="con">
-				<div id="con_bg">
-					<div id="names">
-						<img src="images/home_slo.jpg"/>
-						<h1>请输入姓名</h1>
-						<label for="nameMen">男士</label>
-						<input type="text" id="nameMen" value="" /><br />
-						<label for="nameWomen">女士</label>
-						<input type="text" id="nameWomen" value="" /><br />
-						<button id="btn1">选择模板</button>
-					</div>
-					<div id="imgs">
-						<h1>请选择模板</h1>
-						<ul>
-							<li><img src="images/1.jpg"/></li>
-							<li><img src="images/2.jpg"/></li>
-							<li><img src="images/1.jpg"/></li>
-							<li><img src="images/2.jpg"/></li>
-							<li><img src="images/1.jpg"/></li>
-							<li><img src="images/2.jpg"/></li>
-							<li><img src="images/1.jpg"/></li>
-							<li><img src="images/2.jpg"/></li>
-							<li><img src="images/1.jpg"/></li>
-						</ul>
-						<button id="btn2">填写祝福语</button>
-					</div>
-					<div id="sentiments">
-						<h1>请输入祝福语</h1>
-						<label for="sentiment">祝福语</label>
-						<input type="text" id="sentiment" value="" /><br />
-						<button id="btn3">点击生成</button>
-					</div>
-					<div id="show_bg">
-						<div class="show_img">
-							<img  class="img_bg" src=""/>
-							<div class="show_txt">
-								<div id="show_name">
-									<span id="name1"></span>
-									<img src="images/love.png"/>
-									<span id="name2"></span>
-								</div>
-								<span id="sent"></span>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="telephone=no,email=no" name="format-detection">
+        <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <!--<link rel="apple-touch-icon" href="favicon.png">
+        <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">-->
+        <title>七夕佳节</title>
+    </head>
+    <body>
+        <div id="main">
+        	<div class="main_con" style="background-image:url(images/home.png);" id="names">
+        		<img src="images/up_img.png"/>
+        		<div class="con_fill">
+        			<h1>填写男女姓名</h1>
+        			<label for="nameMen">男</label>
+        			<input type="text" id="nameMen"  maxlength="8" /><br />
+        			<label for="nameWomen">女</label>
+        			<input type="text" id="nameWomen"  maxlength="8" />
+        			<button class="btn_temp">选择模板</button>
+        		</div>
+        		<p class="love_txt">留下爱的永恒印记</p>
+        		<div class="couple">
+        			<img src="images/cp.png"/>
+        		</div>
+        		<div class="main_foo">
+		        	<p>2018©baolongjituan</p>
+		        </div>
+        	</div>
+        	<div class="main_con" style="background-image: url(images/home2.png);display: none;"id="imgs">
+        		<div class="template">
+        			<div class="temp_top">
+        				<span>插画风格</span>
+        				<ul class="imgs">
+	        				<li title="images/templ_bg1.jpg"><img src="images/template1.png"/></li>
+	        				<li title="images/templ_bg2.jpg"><img src="images/template2.png"/></li>
+	        				<li title="images/templ_bg3.jpg"><img src="images/template3.png"/></li>
+	        				<li title="images/templ_bg4.jpg"><img src="images/template4.png"/></li>
+	        			</ul>
+        			</div>
+        			<div class="temp_btm">
+        				<span>Q版风格</span>
+        				<ul class="imgs">
+	        				<li title="images/templ_bg5.jpg"><img src="images/template5.png"/></li>
+	        				<li title="images/templ_bg6.jpg"><img src="images/template6.png"/></li>
+	        				<li title="images/templ_bg7.jpg"><img src="images/template7.png"/></li>
+	        				<li title="images/templ_bg8.jpg"><img src="images/template8.png"/></li>
+	        			</ul>
+        			</div>
+        			<button class="btn_full">填写祝福语</button>
+        		</div>
+        		
+        	</div>
+        	<div class="main_con" style="background-image: url(images/home3.png);display: none;" id="sentiments">
+        		<div class="blessing">
+        			<span>输入祝福语</span>
+        			<textarea class="ble_con" name="" placeholder="仅限15字，列如：亲爱的xxx，我爱你，嫁给我吧！" maxlength="15" autofocus="autofocus"></textarea>
+        			<button class="btn_generate" >点击生成</button>
+        		</div>
+        		
+        	</div>
+        	<div class="main_con" style="background-image: url(images/home4.png);display: none;"  id="show_bg">
+        		<div class="share">
+        			<div class="share_con">
+        				<img class="show_img" src="images/templ_bg1.jpg"/>
+        				<div class="show_txt">
+							<div class="show_name">
+								<span id="name1">刘某某</span>
+								<img src="images/love.png"/>
+								<span id="name2">张某某</span>
 							</div>
-							
+							<span class="sent">百年好合</span>
 						</div>
-						<button id="share">分享朋友圈</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+        			</div>
+        			<button class="btn_share">分享朋友圈</button>
+        		</div>
+        	</div>
+        </div>
+    </body>
 <script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 </html>

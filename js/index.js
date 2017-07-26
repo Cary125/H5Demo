@@ -1,37 +1,44 @@
-
- $(document).ready(function () {
-	$('#names>img').animate({opacity:1},'slow','swing');
-	$('#btn1').on('click',function(){
+ $(document).ready(function (){
+// 	function btn1(){
+//	if(!$('#nameMen').value && !$('#nameWomen').value) {
+//	alert("请输入姓名！"); 
+//	$('#nameMen').focus();
+//	$('#nameWomen').focus(); 
+//	return false;
+//	}
+//	else {
+//		window.location.href ="index2.html";
+//	}
+// }
+// 	var name_Men=$('#nameMen').val();
+//	var name_Women=$('#nameWomen').val();
+//	var senfont=$('.ble_con').val();
+//	var imglist=$(this).attr('title');
+// 	$('.imgs li').on('click',function(){
+// 		var imglist=$(this).attr('title');
+//		$(this).attr('class','selected').siblings().attr('class','');
+// })
+	$('.btn_temp').on('click',function(){
 		var name_Men=$('#nameMen').val();
 		var name_Women=$('#nameWomen').val();
-		$('#names').animate('slow').addClass('add_transform');
+		$('#names').hide();
 		$('#imgs').show();
-		$('#imgs ul li').on('click',function(){
-		var imglist=$(this).children().attr('src');
+		$('.imgs li').on('click',function(){
+		var imglist=$(this).attr('title');
 		$(this).attr('class','selected').siblings().attr('class','');
-		$('#btn2').on('click',function(){
+		$('.btn_full').on('click',function(){
 			$('#imgs').hide();
 			$('#sentiments').show()
 		})
-		$('#btn3').on('click',function(){
-			var senfont=$('#sentiment').val();
+		$('.btn_generate').on('click',function(){
+			var senfont=$('.ble_con').val();
 			$('#sentiments').hide()
 			$('#show_bg').show();
-			$('.show_img .img_bg').attr('src',imglist);
-			$('.show_txt #name1').html(name_Men);
-			$('.show_txt #name2').html(name_Women);
-			$('.show_txt #sent').html(senfont);
+			$('.show_img ').attr('src',imglist);
+			$('.show_name #name1').html(name_Men);
+			$('.show_name #name2').html(name_Women);
+			$('.show_txt .sent').html(senfont);
 		})
 	})
 	})
-	var viewHeight = window.innerHeight; //获取可视区域高度
-	$("input").focus(function()
-	{
-	    $("#main").css("height",viewHeight);
-	}).blur(function()
-	{
-	    $("#main").css("height","100%");
-	});
-	
-	
-});
+})
