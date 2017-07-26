@@ -291,6 +291,8 @@
 }
 .show_name img{
 	margin: 0 .56rem;
+    width: .68rem;
+    height: .52rem;
 }
 .show_txt .sent{
 	position: absolute;
