@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 
 #main{
@@ -8,7 +8,7 @@
 }
 .main_con{
 	width: 10rem;
-	min-height: 100%;
+	min-height: 17.79rem;
 	position: relative;
 	color: #FFFFFF;
 	background-size: 100%;
